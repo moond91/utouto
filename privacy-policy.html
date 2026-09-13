@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UMIBOT — 개인정보처리방침 / Privacy Policy</title>
+<link rel="icon" href="umibot-logo.png">
+<style>
+  :root {
+    --bg0:#111114; --bg1:#1c1c22; --line:#2f2f38;
+    --accent:#b7a4ff; --accent2:#cfc2ff; --text0:#ecebf3; --text1:#c8c6d6; --muted:#8f8ca1;
+  }
+  * { box-sizing:border-box; }
+  body { background:var(--bg0); color:var(--text1); font-family:-apple-system,BlinkMacSystemFont,'IBM Plex Sans KR','Malgun Gothic',sans-serif; max-width:720px; margin:0 auto; padding:40px 20px 64px; line-height:1.8; }
+  h1 { color:var(--accent); font-size:26px; margin-bottom:4px; }
+  h2 { color:var(--text0); font-size:18px; margin-top:30px; border-bottom:1px solid var(--line); padding-bottom:6px; }
+  .date { color:var(--muted); font-size:14px; margin-bottom:22px; }
+  p, li { margin-bottom:10px; }
+  ul { padding-left:20px; }
+  a { color:var(--accent2); }
+  code { background:var(--bg1); padding:1px 6px; border-radius:4px; font-size:.92em; }
+  strong { color:var(--text0); }
+  .lang-toggle { display:flex; gap:8px; margin-bottom:22px; }
+  .lang-toggle button { padding:6px 16px; border:1px solid var(--line); border-radius:8px; background:var(--bg1); color:var(--text1); cursor:pointer; font:inherit; font-size:13px; }
+  .lang-toggle button.active { background:var(--accent); color:#1c1236; border-color:var(--accent); font-weight:700; }
+  .section { display:none; }
+  .section.active { display:block; }
+  table { width:100%; border-collapse:collapse; margin:8px 0 14px; font-size:14px; }
+  th, td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+  th { background:var(--bg1); color:var(--text0); }
+</style>
+</head>
+<body>
+  <h1>🔒 UMIBOT</h1>
+  <div class="lang-toggle">
+    <button class="active" onclick="showLang('ko', event)">한국어</button>
+    <button onclick="showLang('en', event)">English</button>
+  </div>
+
+  <!-- 한국어 -->
+  <div class="section active" id="lang-ko">
+    <p class="date">최종 업데이트: 2026년 9월</p>
+
+    <p>UMIBOT(이하 "본 프로그램")은 대본으로 그림·목소리·자막·영상을 만드는 Windows 데스크톱 프로그램입니다. 본 방침은 본 프로그램이 어떤 정보를 어떻게 다루는지 설명합니다.</p>
+
+    <h2>1. 수집하는 정보</h2>
+    <p>본 프로그램은 <strong>사용 승인(로그인) 목적으로만</strong> 아래 정보를 처리합니다.</p>
+    <table>
+      <tr><th>항목</th><th>언제</th></tr>
+      <tr><td>구글 계정의 <strong>이메일 주소·이름</strong></td><td>구글 계정으로 로그인할 때</td></tr>
+      <tr><td>신청 시 입력한 <strong>성함·닉네임·강의명</strong></td><td>처음 사용 신청할 때</td></tr>
+      <tr><td><strong>기기 식별값</strong>(컴퓨터 부품 정보로 만든 고유 번호)·<strong>컴퓨터 이름</strong>·접속 시각·프로그램 버전</td><td>로그인·사용 중</td></tr>
+    </table>
+    <p>기기 식별값은 컴퓨터 부품 정보를 되돌릴 수 없게 변환(해시)한 값이며, 원래 정보를 알 수 없습니다. <strong>한 계정으로 쓸 수 있는 컴퓨터 수를 제한</strong>하기 위한 것입니다.</p>
+
+    <h2>2. 이용 목적</h2>
+    <ul>
+      <li>사용 승인 및 이용 기간 관리</li>
+      <li>한 계정당 등록 컴퓨터 수 제한(무단 공유 방지)</li>
+      <li>새 신청·비정상 접속 시 관리자 알림</li>
+    </ul>
+
+    <h2>3. 저장 위치와 보관</h2>
+    <ul>
+      <li>위 승인 정보는 관리자의 <strong>구글 스프레드시트</strong>에 저장되며, 새 신청·기기 한도 초과 시 관리자에게 알림(텔레그램)이 전송됩니다.</li>
+      <li>로그인 상태는 본인 컴퓨터에만 암호화되어 저장됩니다.</li>
+      <li>이용을 중단하고 삭제를 원하시면 아래 문의처로 요청해 주세요. 해당 정보를 삭제해 드립니다.</li>
+    </ul>
+
+    <h2>4. 컴퓨터에만 저장되고 외부로 보내지 않는 정보</h2>
+    <ul>
+      <li>사용자가 넣은 <strong>API 키</strong>는 본인 컴퓨터에만 운영체제 암호화로 저장되며, 본 프로그램의 승인 서버로 전송되지 않습니다.</li>
+      <li>사용자가 입력한 <strong>대본과 만들어진 그림·영상·음성</strong>은 본인 컴퓨터에만 저장되며, 본 프로그램의 승인 서버로 전송되지 않습니다.</li>
+    </ul>
+
+    <h2>5. 제3자 서비스</h2>
+    <p>본 프로그램은 사용자가 고른 기능에 따라 아래 외부 서비스를 이용합니다. 각 서비스에 전송되는 정보는 해당 서비스의 개인정보처리방침을 따릅니다.</p>
+    <ul>
+      <li><strong>Google</strong> — 로그인(계정 확인), 그리고 사용자가 구글 기능을 쓸 때 그림·영상·글 생성 요청</li>
+      <li>사용자가 직접 API 키를 넣어 쓰는 <strong>유료 AI 서비스</strong>(예: ElevenLabs·Typecast·MiniMax 등) — 그 기능을 쓸 때만 해당 서비스로 요청이 전송됩니다.</li>
+    </ul>
+    <p>구글 로그인으로 받는 정보는 <strong>이메일·이름뿐</strong>이며, 이메일·연락처·문서 등 다른 구글 데이터에는 접근하지 않습니다.</p>
+
+    <h2>6. 변경 사항</h2>
+    <p>본 방침은 변경될 수 있으며, 변경 시 본 페이지에서 업데이트됩니다.</p>
+
+    <h2>7. 문의</h2>
+    <p>문의·정보 삭제 요청은 카카오톡 오픈채팅으로 연락해 주세요:<br>
+    <a href="https://open.kakao.com/o/sHtMttNi">https://open.kakao.com/o/sHtMttNi</a></p>
+  </div>
+
+  <!-- English -->
+  <div class="section" id="lang-en">
+    <p class="date">Last updated: September 2026</p>
+
+    <p>UMIBOT ("the app") is a Windows desktop program that turns a script into images, narration, subtitles, and video. This policy explains what information the app handles and how.</p>
+
+    <h2>1. Information We Collect</h2>
+    <p>The app processes the following <strong>only for access approval (login)</strong>:</p>
+    <table>
+      <tr><th>Item</th><th>When</th></tr>
+      <tr><td>Your Google account <strong>email and name</strong></td><td>When you sign in with Google</td></tr>
+      <tr><td><strong>Name, nickname, course</strong> you enter</td><td>When you first request access</td></tr>
+      <tr><td><strong>Device identifier</strong> (a hash of hardware info), <strong>computer name</strong>, access time, app version</td><td>During login and use</td></tr>
+    </table>
+    <p>The device identifier is a one-way hash of hardware information and cannot be reversed. It is used only to <strong>limit the number of computers</strong> per account.</p>
+
+    <h2>2. Purpose</h2>
+    <ul>
+      <li>Approving access and managing the usage period</li>
+      <li>Limiting the number of registered computers per account (preventing unauthorized sharing)</li>
+      <li>Notifying the administrator of new requests or abnormal access</li>
+    </ul>
+
+    <h2>3. Storage and Retention</h2>
+    <ul>
+      <li>The approval data above is stored in the administrator's <strong>Google Sheet</strong>. New requests and device-limit events trigger an administrator notification (Telegram).</li>
+      <li>Your login state is stored, encrypted, only on your own computer.</li>
+      <li>To stop using the app and delete your data, contact us below and we will remove it.</li>
+    </ul>
+
+    <h2>4. Stored Only on Your Computer (Never Sent to Us)</h2>
+    <ul>
+      <li><strong>API keys</strong> you enter are stored, OS-encrypted, only on your computer and are never sent to our approval server.</li>
+      <li>Your <strong>scripts and generated images, video, and audio</strong> are stored only on your computer and are never sent to our approval server.</li>
+    </ul>
+
+    <h2>5. Third-Party Services</h2>
+    <p>Depending on the features you choose, the app uses the external services below. Data sent to each service is governed by that service's own privacy policy.</p>
+    <ul>
+      <li><strong>Google</strong> — sign-in (identity check), and image/video/text generation requests when you use Google-based features.</li>
+      <li><strong>Paid AI services</strong> you enable with your own API key (e.g., ElevenLabs, Typecast, MiniMax) — requests are sent only when you use those features.</li>
+    </ul>
+    <p>Google sign-in gives us <strong>only your email and name</strong>. We do not access any other Google data such as your mail, contacts, or documents.</p>
+
+    <h2>6. Changes</h2>
+    <p>This policy may be updated from time to time. Changes will be posted on this page.</p>
+
+    <h2>7. Contact</h2>
+    <p>For questions or data deletion requests, contact us via KakaoTalk Open Chat:<br>
+    <a href="https://open.kakao.com/o/sHtMttNi">https://open.kakao.com/o/sHtMttNi</a></p>
+  </div>
+
+  <script>
+    function showLang(lang, e) {
+      document.querySelectorAll('.section').forEach(function (s) { s.classList.remove('active'); });
+      document.querySelectorAll('.lang-toggle button').forEach(function (b) { b.classList.remove('active'); });
+      document.getElementById('lang-' + lang).classList.add('active');
+      e.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>

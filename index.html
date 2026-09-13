@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UMIBOT</title>
+<meta name="description" content="대본만 넣으면 그림·목소리·자막·영상까지 자동으로 만드는 유튜브 영상 제작 프로그램">
+<link rel="icon" href="umibot-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    --bg0:#111114; --bg1:#16161a; --bg2:#1c1c22; --line:#2f2f38;
+    --accent:#b7a4ff; --accent2:#cfc2ff; --on-accent:#1c1236;
+    --text0:#ecebf3; --text1:#c8c6d6; --muted:#8f8ca1; --ok:#93d3a6;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body {
+    background:
+      radial-gradient(900px 500px at 50% -8%, #1c1a28 0%, transparent 60%),
+      var(--bg0);
+    color:var(--text0);
+    font-family:'IBM Plex Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif;
+    line-height:1.7; font-size:16px;
+    padding-inline:20px; padding-block:0 64px;
+  }
+  .wrap { max-width:760px; margin:0 auto; }
+  h1,h2,h3,.brand { font-family:'Jua','Malgun Gothic',sans-serif; font-weight:400; text-wrap:balance; }
+  a { color:var(--accent2); }
+
+  /* Hero */
+  .hero { text-align:center; padding:56px 0 40px; }
+  .hero img { width:120px; height:120px; filter:drop-shadow(0 12px 30px rgba(0,0,0,.5)); }
+  .hero .brand { font-size:40px; letter-spacing:.5px; margin:14px 0 4px; color:var(--accent); }
+  .hero .tag { font-size:17px; color:var(--text1); max-width:34ch; margin:0 auto 28px; }
+
+  .dl { display:inline-flex; flex-direction:column; align-items:center; gap:6px; text-decoration:none; }
+  .dl .btn {
+    display:inline-flex; align-items:center; gap:10px;
+    background:linear-gradient(135deg,#9985f0,#cfc2ff); color:var(--on-accent);
+    font-weight:700; font-size:18px; padding:15px 34px; border-radius:12px;
+    box-shadow:0 10px 30px rgba(183,164,255,.28); transition:transform .12s, box-shadow .12s;
+  }
+  .dl:hover .btn { transform:translateY(-2px); box-shadow:0 14px 36px rgba(183,164,255,.38); }
+  .dl .sub { font-size:13px; color:var(--muted); }
+  .dl .btn svg { width:20px; height:20px; }
+
+  section { border-top:1px solid var(--line); padding:36px 0; }
+  section h2 { font-size:24px; color:var(--accent); margin-bottom:6px; }
+  section .lead { color:var(--muted); margin-bottom:20px; }
+
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
+  .card { background:var(--bg2); border:1px solid var(--line); border-radius:12px; padding:16px 18px; }
+  .card .ico { font-size:24px; }
+  .card b { display:block; margin:6px 0 2px; font-size:15px; }
+  .card span { font-size:13px; color:var(--muted); }
+
+  ol.steps { list-style:none; counter-reset:s; display:grid; gap:12px; }
+  ol.steps li { position:relative; padding:14px 16px 14px 52px; background:var(--bg1); border:1px solid var(--line); border-radius:10px; }
+  ol.steps li::before {
+    counter-increment:s; content:counter(s);
+    position:absolute; left:14px; top:14px; width:26px; height:26px; line-height:26px; text-align:center;
+    background:var(--accent); color:var(--on-accent); border-radius:50%; font-weight:700; font-size:14px;
+  }
+  ol.steps b { color:var(--accent2); }
+
+  .note { background:rgba(255,171,77,.08); border:1px solid rgba(255,171,77,.3); border-radius:10px; padding:14px 16px; margin-top:14px; font-size:14px; color:var(--text1); }
+  .note b { color:#ffc46b; }
+
+  .req { display:flex; flex-wrap:wrap; gap:8px 20px; font-size:14px; color:var(--text1); margin-top:8px; }
+  .req span b { color:var(--accent2); font-weight:600; }
+
+  footer { border-top:1px solid var(--line); padding-top:28px; text-align:center; color:var(--muted); font-size:13px; }
+  footer a { margin:0 8px; }
+  footer .row { margin-bottom:10px; }
+
+  @media (max-width:520px) {
+    .hero .brand { font-size:32px; }
+    .hero img { width:96px; height:96px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <img src="umibot-logo.png" alt="UMIBOT 로고">
+    <div class="brand">UMIBOT</div>
+    <p class="tag">대본만 넣으면 그림·목소리·자막·영상까지<br>자동으로 만들어 주는 프로그램</p>
+    <a class="dl" href="https://github.com/moond91/umibot/releases/latest">
+      <span class="btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+        Windows용 다운로드
+      </span>
+      <span class="sub">눌러서 최신 버전을 받으세요</span>
+    </a>
+    <div class="req" style="justify-content:center">
+      <span>💻 <b>Windows 10 / 11</b> (64비트)</span>
+      <span>🖥 램 <b>16GB</b> 권장</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>무엇을 만드나요</h2>
+    <p class="lead">대본 하나로 아래를 자동으로 만듭니다.</p>
+    <div class="grid">
+      <div class="card"><div class="ico">🖼</div><b>그림</b><span>장면마다 어울리는 그림</span></div>
+      <div class="card"><div class="ico">🎬</div><b>영상</b><span>움직이는 영상으로도</span></div>
+      <div class="card"><div class="ico">🎤</div><b>목소리</b><span>대본을 읽는 내레이션</span></div>
+      <div class="card"><div class="ico">💬</div><b>자막</b><span>목소리에 맞춘 자막</span></div>
+    </div>
+    <p style="margin-top:16px; color:var(--text1); font-size:15px;">다 만든 뒤에는 <b style="color:var(--accent2)">브루(Vrew)·mp4 영상·캡컷(CapCut)</b> 중에서 골라 내보낼 수 있어요.</p>
+  </section>
+
+  <section>
+    <h2>설치하기</h2>
+    <p class="lead">처음 한 번만 하면 됩니다.</p>
+    <ol class="steps">
+      <li>위 <b>[Windows용 다운로드]</b>를 눌러 파일을 받습니다.</li>
+      <li>받은 <b>UMIBOT-Setup 파일</b>을 더블클릭합니다.</li>
+      <li>설치가 끝나면 바탕화면의 <b>UMIBOT</b> 아이콘으로 실행합니다.</li>
+      <li>첫 화면에서 <b>[Google 계정으로 로그인]</b> → 사용 신청 → 승인되면 바로 씁니다.</li>
+    </ol>
+    <div class="note">
+      <b>⚠ "Windows의 PC 보호" 창이 뜨면?</b><br>
+      처음 설치할 때 파란 경고 창이 뜰 수 있어요. 나쁜 프로그램이라서가 아니라, 아직 널리 퍼지지 않은 새 프로그램이라 그렇습니다.
+      <b>[추가 정보]</b>를 누른 뒤 아래 <b>[실행]</b>을 누르면 됩니다.
+    </div>
+  </section>
+
+  <section>
+    <h2>업데이트</h2>
+    <p class="lead">한 번 설치하면 다음부터는 자동입니다.</p>
+    <p style="color:var(--text1); font-size:15px;">새 버전이 나오면 프로그램 위쪽 <b style="color:var(--accent2)">⟳ 업데이트</b>에 표시됩니다. 눌러서 받으면 최신으로 바뀌어요. 처음부터 다시 받을 필요가 없습니다.</p>
+  </section>
+
+  <footer>
+    <div class="row">
+      <a href="https://open.kakao.com/o/sHtMttNi">문의하기 (카카오톡)</a>·
+      <a href="privacy-policy.html">개인정보처리방침</a>
+    </div>
+    <div>© 2026 UMIBOT</div>
+  </footer>
+
+</div>
+</body>
+</html>
